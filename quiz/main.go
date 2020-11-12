@@ -56,4 +56,47 @@ func main(){
 			}
 	}
 
+	// hitung rata-rata dan nilai >= 90
+	scores := [9]int{100, 80, 75, 92, 70, 93, 12, 67, 15}
+	tmp := 0
+	for _, val := range scores {
+		tmp += val
+	}
+	fmt.Println(tmp)
+	average := float64(tmp / len(scores))
+	fmt.Println(average)
+
+	avg := calculation.Average(scores, len(scores))
+	fmt.Printf("the value is :%f", avg)
+	fmt.Println()
+
+	var goodScores []int
+
+	for _, val := range scores {
+		if val >= 90 {
+			goodScores = append(goodScores, val)
+		}
+	}
+
+	fmt.Println(goodScores)
+
+	nilai := []int{10,5,8,9,7}
+	total := calculation.Sum(nilai)
+
+	fmt.Println(total)
+
+	// result, err := calculation.Calculate(10,2, "+")
+	// result, err := calculation.Calculate(10,2, "-")
+	// result, err := calculation.Calculate(10,2, "*")
+	result, err := calculation.Calculate(10,2, "/")
+	// result, err := calculation.Calculate(10,2, "d")
+
+	if err != nil {
+		fmt.Println("Terjadi kesalahan")
+		fmt.Println(err.Error())
+	} else {
+		fmt.Println(result)
+	}
+
+
 }	
