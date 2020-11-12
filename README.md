@@ -37,3 +37,7 @@ hallo, belajar Golang
 # nama package adalah name karena agar executable
 ```
 
+
+
+## referensi
+- [kelas go lang fundamental bwa](https://buildwithangga.com/kelas/golang-fundamental)
